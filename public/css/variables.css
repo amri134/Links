@@ -1,0 +1,162 @@
+/* =========================================================
+   VARIABLES.CSS
+========================================================= */
+
+:root {
+
+    /* =====================================================
+       LAYOUT
+    ===================================================== */
+
+    --page-max-width: 512px;
+
+    --page-padding-desktop: 24px;
+
+    --page-padding-mobile: 12px;
+
+
+    /* =====================================================
+       FONT
+    ===================================================== */
+
+    --font-primary:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+
+    /* =====================================================
+       DARK THEME
+    ===================================================== */
+
+    --page-background: #070707;
+
+    --card-background-top: #323232;
+
+    --card-background-middle: #202020;
+
+    --card-background-bottom: #101010;
+
+    --text-primary: #f4f4f5;
+
+    --text-secondary: #d4d4d8;
+
+    --text-muted: #a1a1aa;
+
+    --surface:
+        rgba(255, 255, 255, 0.07);
+
+    --surface-hover:
+        rgba(255, 255, 255, 0.12);
+
+    --border:
+        rgba(255, 255, 255, 0.10);
+
+    --border-hover:
+        rgba(255, 255, 255, 0.20);
+
+    --verified: #1d9bf0;
+
+
+    /* =====================================================
+       RADIUS
+    ===================================================== */
+
+    --radius-card: 24px;
+
+    --radius-group: 22px;
+
+    --radius-button: 16px;
+
+
+    /* =====================================================
+       SHADOW
+    ===================================================== */
+
+    --shadow-card:
+        0 20px 60px
+        rgba(0, 0, 0, 0.35);
+
+
+    /* =====================================================
+       TRANSITION
+    ===================================================== */
+
+    --transition-fast:
+        160ms ease;
+
+    --transition-normal:
+        260ms ease;
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html.dark {
+
+    --page-background: #070707;
+
+    --card-background-top: #323232;
+
+    --card-background-middle: #202020;
+
+    --card-background-bottom: #101010;
+
+    --text-primary: #f4f4f5;
+
+    --text-secondary: #d4d4d8;
+
+    --text-muted: #a1a1aa;
+
+    --surface:
+        rgba(255, 255, 255, 0.07);
+
+    --surface-hover:
+        rgba(255, 255, 255, 0.12);
+
+    --border:
+        rgba(255, 255, 255, 0.10);
+
+    --border-hover:
+        rgba(255, 255, 255, 0.20);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+html.light {
+
+    --page-background: #e5e7eb;
+
+    --card-background-top: #ffffff;
+
+    --card-background-middle: #f4f4f5;
+
+    --card-background-bottom: #d4d4d8;
+
+    --text-primary: #18181b;
+
+    --text-secondary: #3f3f46;
+
+    --text-muted: #71717a;
+
+    --surface:
+        rgba(255, 255, 255, 0.58);
+
+    --surface-hover:
+        rgba(255, 255, 255, 0.88);
+
+    --border:
+        rgba(0, 0, 0, 0.09);
+
+    --border-hover:
+        rgba(0, 0, 0, 0.18);
+}

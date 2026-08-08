@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Personal profile, portfolio, social media, contact, blog, dan publication."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#090909"
+    >
+
+    <title>Nama Anda | Personal Links</title>
+
+    <!-- =====================================================
+         THEME BEFORE PAGE RENDER
+    ====================================================== -->
+    <script>
+        (function () {
+            try {
+                const savedTheme =
+                    localStorage.getItem("color-mode");
+
+                const prefersDark =
+                    window.matchMedia(
+                        "(prefers-color-scheme: dark)"
+                    ).matches;
+
+                const theme =
+                    savedTheme ||
+                    (prefersDark ? "dark" : "light");
+
+                document.documentElement.classList.add(theme);
+            }
+            catch (error) {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="./favicon.ico"
+    >
+
+    <link
+        rel="manifest"
+        href="./manifest.webmanifest"
+    >
+
+<!-- =====================================================
+     CSS
+====================================================== -->
+
+<link
+    rel="stylesheet"
+    href="./css/reset.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/variables.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/base.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/components.css"
+>
+
+<link
+    rel="stylesheet"
+    href="./css/responsive.css"
+>
+    
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+    <div
+        class="page-background"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+    <main class="page-wrapper">
+
+        <article class="profile-container">
+
+
+            <!-- =================================================
+                 TOP ACTION BUTTONS
+            ================================================== -->
+            <div class="profile-actions">
+
+                <button
+                    id="shareProfileButton"
+                    class="profile-action-button"
+                    type="button"
+                    aria-label="Bagikan profil"
+                    title="Bagikan profil"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    >
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+
+                        <path d="M8.59 13.51L15.42 17.49"></path>
+                        <path d="M15.41 6.51L8.59 10.49"></path>
+                    </svg>
+                </button>
+
+
+                <button
+                    id="themeToggleButton"
+                    class="profile-action-button"
+                    type="button"
+                    aria-label="Ubah tema"
+                    title="Ubah tema"
+                >
+                    <span
+                        id="themeIcon"
+                        class="theme-icon"
+                        aria-hidden="true"
+                    ></span>
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+            <header class="profile-header">
+
+                <div class="profile-avatar-wrapper">
+
+                    <!-- FALLBACK -->
+                    <div
+                        id="profileAvatarFallback"
+                        class="profile-avatar-fallback"
+                        aria-hidden="true"
+                    >
+                        NA
+                    </div>
+
+                    <!-- IMAGE -->
+                    <img
+                        id="profileAvatar"
+                        class="profile-avatar"
+                        src="./assets/images/profile.webp"
+                        alt="Foto profil"
+                        width="96"
+                        height="96"
+                    >
+
+                    <!-- STORY RING -->
+                    <svg
+                        class="profile-story-ring"
+                        viewBox="0 0 140 140"
+                        width="110"
+                        height="110"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <linearGradient
+                                id="profileRingGradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="100%"
+                            >
+                                <stop
+                                    offset="0%"
+                                    stop-color="#f09433"
+                                ></stop>
+
+                                <stop
+                                    offset="30%"
+                                    stop-color="#dc2743"
+                                ></stop>
+
+                                <stop
+                                    offset="60%"
+                                    stop-color="#cc2366"
+                                ></stop>
+
+                                <stop
+                                    offset="100%"
+                                    stop-color="#bc1888"
+                                ></stop>
+                            </linearGradient>
+                        </defs>
+
+                        <circle
+                            cx="70"
+                            cy="70"
+                            r="63"
+                            fill="none"
+                            stroke="url(#profileRingGradient)"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-dasharray="257 139"
+                        ></circle>
+
+                        <circle
+                            class="profile-ring-dashed"
+                            cx="70"
+                            cy="70"
+                            r="63"
+                            fill="none"
+                            stroke="url(#profileRingGradient)"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-dashoffset="-257"
+                        ></circle>
+                    </svg>
+
+                </div>
+
+
+                <div class="profile-identity">
+
+                    <div class="profile-name-wrapper">
+
+                        <h1
+                            id="profileName"
+                            class="profile-name"
+                        >
+                            Nama Anda
+                        </h1>
+
+                        <span
+                            id="verifiedBadge"
+                            class="verified-badge"
+                            title="Verified"
+                            aria-label="Verified"
+                        >
+                            ✓
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        id="profileRole"
+                        class="profile-role"
+                    >
+                        Full Stack Developer
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 QUICK LINKS
+            ================================================== -->
+            <nav
+                id="quickLinksContainer"
+                class="quick-links"
+                aria-label="Social media dan link utama"
+            ></nav>
+
+
+            <!-- =================================================
+                 ACCORDION
+            ================================================== -->
+            <section
+                id="linksContainer"
+                class="links-container"
+                aria-label="Daftar link"
+            ></section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+            <footer class="site-footer">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+
+                    <span id="footerName">
+                        Nama Anda
+                    </span>.
+
+                    <span id="footerSuffix">
+                        All rights reserved.
+                    </span>
+                </p>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+    <div
+        id="toastContainer"
+        class="toast-container"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <script
+        src="./js/ui.js"
+        defer
+    ></script>
+
+    <script
+        src="./js/links.js"
+        defer
+    ></script>
+
+    <script
+        src="./js/app.js"
+        defer
+    ></script>
+
+</body>
+</html>

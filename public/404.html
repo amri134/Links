@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="robots"
+        content="noindex, nofollow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#09090b"
+    >
+
+    <title>
+        404 | Halaman Tidak Ditemukan
+    </title>
+
+
+    <script>
+        (function () {
+
+            try {
+
+                const saved =
+                    localStorage.getItem("color-mode");
+
+                const prefersDark =
+                    window.matchMedia(
+                        "(prefers-color-scheme: dark)"
+                    ).matches;
+
+                document.documentElement.classList.add(
+                    saved ||
+                    (
+                        prefersDark
+                            ? "dark"
+                            : "light"
+                    )
+                );
+
+            }
+            catch (error) {
+
+                document.documentElement.classList.add(
+                    "dark"
+                );
+
+            }
+
+        })();
+    </script>
+
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="./favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="error-page">
+
+        <section class="error-container">
+
+            <p class="error-code">
+                404
+            </p>
+
+            <h1 class="error-title">
+                Halaman tidak ditemukan
+            </h1>
+
+            <p class="error-description">
+                Halaman yang Anda cari mungkin telah dipindahkan,
+                dihapus, atau alamat yang dimasukkan tidak tersedia.
+            </p>
+
+            <a
+                class="error-home-button"
+                href="./"
+            >
+                Kembali ke Beranda
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

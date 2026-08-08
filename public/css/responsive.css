@@ -1,0 +1,369 @@
+/* =========================================================
+   RESPONSIVE.CSS
+========================================================= */
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .page-wrapper {
+        padding:
+            24px
+            16px;
+    }
+
+
+    .profile-container {
+        width: 512px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / LARGE PHONE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .page-wrapper {
+        padding:
+            18px
+            14px;
+    }
+
+
+    .profile-container {
+        width: 100%;
+
+        max-width: 512px;
+
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .page-wrapper {
+        padding:
+            12px
+            10px;
+    }
+
+
+    .profile-container {
+        padding:
+            20px
+            16px;
+
+        border-radius: 22px;
+    }
+
+
+    .profile-actions {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+
+    .profile-header {
+        margin-top: 22px;
+
+        margin-bottom: 24px;
+    }
+
+
+    .quick-links {
+        gap:
+            clamp(
+                11px,
+                4vw,
+                18px
+            );
+
+        margin-bottom: 22px;
+    }
+
+
+    .link-group {
+        border-radius: 20px;
+    }
+
+
+    .link-group-toggle {
+        min-height: 74px;
+
+        padding:
+            16px;
+    }
+
+
+    .link-group-title {
+        font-size: 0.95rem;
+    }
+
+
+    .link-list {
+        padding:
+            4px
+            10px
+            12px;
+    }
+
+
+    .link-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            48px;
+
+        gap: 7px;
+    }
+
+
+    .link-card {
+        min-height: 60px;
+
+        padding:
+            9px
+            11px;
+    }
+
+
+    .link-options {
+        width: 48px;
+        min-width: 48px;
+
+        min-height: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .page-wrapper {
+        padding:
+            8px;
+    }
+
+
+    .profile-container {
+        padding:
+            18px
+            12px;
+    }
+
+
+    .profile-action-button {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+
+    .profile-avatar-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .profile-avatar {
+        top: 7px;
+        left: 7px;
+
+        width: 86px !important;
+        height: 86px !important;
+
+        min-width: 86px;
+        min-height: 86px;
+
+        max-width: 86px;
+        max-height: 86px;
+    }
+
+
+    .profile-avatar-fallback {
+        width: 86px;
+        height: 86px;
+    }
+
+
+    .profile-story-ring {
+        width: 100px !important;
+        height: 100px !important;
+
+        min-width: 100px;
+        min-height: 100px;
+
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+
+    .quick-links {
+        gap: 10px;
+    }
+
+
+    .quick-link {
+        width: 26px !important;
+        height: 26px !important;
+
+        flex-basis: 26px;
+    }
+
+
+    .link-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            44px;
+
+        gap: 6px;
+    }
+
+
+    .link-options {
+        width: 44px;
+        min-width: 44px;
+    }
+
+
+    .link-content strong {
+        font-size: 0.86rem;
+    }
+
+
+    .link-content small {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONE
+========================================================= */
+
+@media (
+    orientation: landscape
+)
+and
+(
+    max-height: 520px
+) {
+
+    .page-wrapper {
+        align-items: flex-start;
+    }
+
+
+    .profile-header {
+        margin-top: 10px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .profile-avatar-wrapper {
+        width: 82px;
+        height: 82px;
+    }
+
+
+    .profile-avatar {
+        width: 68px !important;
+        height: 68px !important;
+
+        min-width: 68px;
+        min-height: 68px;
+
+        max-width: 68px;
+        max-height: 68px;
+    }
+
+
+    .profile-avatar-fallback {
+        width: 68px;
+        height: 68px;
+    }
+
+
+    .profile-story-ring {
+        width: 82px !important;
+        height: 82px !important;
+
+        min-width: 82px;
+        min-height: 82px;
+
+        max-width: 82px;
+        max-height: 82px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCHSCREEN
+========================================================= */
+
+@media (
+    hover: none
+)
+and
+(
+    pointer: coarse
+) {
+
+    .quick-link:hover,
+    .link-card:hover,
+    .link-options:hover,
+    .profile-action-button:hover {
+        transform: none;
+    }
+
+
+    .link-card:active {
+        transform:
+            scale(0.985);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}

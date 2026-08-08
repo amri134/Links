@@ -1,0 +1,1233 @@
+/* =========================================================
+   COMPONENTS.CSS
+========================================================= */
+
+
+/* =========================================================
+   PROFILE ACTIONS
+========================================================= */
+
+.profile-actions {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+    right: 12px;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    pointer-events: none;
+}
+
+
+.profile-action-button {
+    display: grid;
+
+    place-items: center;
+
+    flex:
+        0 0
+        40px;
+
+    width: 40px;
+    height: 40px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 50%;
+
+    color:
+        var(--text-primary);
+
+    background:
+        rgba(100, 100, 100, 0.22);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    pointer-events: auto;
+
+    transition:
+        transform
+        var(--transition-fast),
+        background
+        var(--transition-fast);
+}
+
+
+.profile-action-button:hover {
+    transform:
+        scale(1.05);
+
+    background:
+        rgba(120, 120, 120, 0.32);
+}
+
+
+.profile-action-button svg,
+.theme-icon svg {
+    display: block;
+
+    width: 20px !important;
+    height: 20px !important;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    max-width: 20px;
+    max-height: 20px;
+
+    fill: none;
+
+    stroke:
+        currentColor;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+.theme-icon {
+    display: grid;
+
+    place-items: center;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.profile-header {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin:
+        20px 0
+        28px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.profile-avatar-wrapper {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 110px;
+    height: 110px;
+
+    margin:
+        0 auto
+        16px;
+}
+
+
+/* =========================================================
+   AVATAR FALLBACK
+========================================================= */
+
+.profile-avatar-fallback {
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    z-index: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 96px;
+    height: 96px;
+
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3f3f46,
+            #18181b
+        );
+}
+
+
+/* =========================================================
+   AVATAR IMAGE
+========================================================= */
+
+.profile-avatar {
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    z-index: 1;
+
+    display: block;
+
+    width: 96px !important;
+    height: 96px !important;
+
+    min-width: 96px;
+    min-height: 96px;
+
+    max-width: 96px;
+    max-height: 96px;
+
+    margin: 0;
+
+    border:
+        4px solid
+        #404040;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center;
+
+    background:
+        #27272a;
+}
+
+
+.profile-avatar.is-error {
+    display: none;
+}
+
+
+/* =========================================================
+   PROFILE RING
+========================================================= */
+
+.profile-story-ring {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 110px !important;
+    height: 110px !important;
+
+    min-width: 110px;
+    min-height: 110px;
+
+    max-width: 110px;
+    max-height: 110px;
+
+    pointer-events: none;
+
+    animation:
+        profileRingSpin
+        8s
+        linear
+        infinite;
+}
+
+
+.profile-ring-dashed {
+    animation:
+        profileRingDash
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes profileRingSpin {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes profileRingDash {
+
+    0%,
+    35%,
+    100% {
+        stroke-dasharray:
+            10 9 10 9 10 9 10 72;
+    }
+
+    65%,
+    85% {
+        stroke-dasharray:
+            139 257;
+    }
+
+}
+
+
+/* =========================================================
+   PROFILE IDENTITY
+========================================================= */
+
+.profile-identity {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+
+.profile-name-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    margin-bottom: 8px;
+}
+
+
+.profile-name {
+    margin: 0;
+
+    font-size: 1.125rem;
+
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    color:
+        var(--text-primary);
+}
+
+
+.verified-badge {
+    display: inline-grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    color: white;
+
+    background:
+        var(--verified);
+}
+
+
+.profile-role {
+    margin: 0;
+
+    font-size: 0.875rem;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    color:
+        var(--text-primary);
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.quick-links {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    min-height: 34px;
+
+    margin:
+        0 0
+        26px;
+
+    padding: 0;
+
+    gap:
+        clamp(
+            14px,
+            4vw,
+            20px
+        );
+}
+
+
+/* =========================================================
+   QUICK LINK ITEM
+========================================================= */
+
+.quick-link {
+    display: grid;
+
+    place-items: center;
+
+    flex:
+        0 0
+        28px;
+
+    width: 28px !important;
+    height: 28px !important;
+
+    min-width: 28px;
+    min-height: 28px;
+
+    max-width: 28px;
+    max-height: 28px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    color:
+        var(--text-secondary);
+
+    transition:
+        color
+        var(--transition-fast),
+        transform
+        var(--transition-fast);
+}
+
+
+.quick-link:hover {
+    color:
+        var(--text-primary);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* VERY IMPORTANT:
+   mencegah SVG menjadi ratusan pixel.
+*/
+
+.quick-link > span {
+    display: grid;
+
+    place-items: center;
+
+    width: 24px !important;
+    height: 24px !important;
+
+    min-width: 24px;
+    min-height: 24px;
+
+    max-width: 24px;
+    max-height: 24px;
+
+    overflow: hidden;
+}
+
+
+.quick-link svg {
+    display: block;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    flex-shrink: 0;
+
+    fill:
+        currentColor;
+}
+
+
+.quick-link .text-icon {
+    display: grid;
+
+    place-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.links-container {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   ACCORDION GROUP
+========================================================= */
+
+.link-group {
+    display: block;
+
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius-group);
+
+    background:
+        rgba(0, 0, 0, 0.24);
+
+    transition:
+        border-color
+        var(--transition-normal),
+        box-shadow
+        var(--transition-normal);
+}
+
+
+html.light
+.link-group {
+    background:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.link-group:hover {
+    border-color:
+        var(--border-hover);
+}
+
+
+.link-group.is-open {
+    box-shadow:
+        0 10px 32px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
+========================================================= */
+
+.link-group-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    margin: 0;
+
+    padding:
+        18px
+        18px;
+
+    color:
+        var(--text-primary);
+
+    background:
+        transparent;
+
+    text-align: left;
+}
+
+
+.link-group-title {
+    min-width: 0;
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    color:
+        var(--text-secondary);
+}
+
+
+.link-group-chevron {
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 22px;
+    height: 22px;
+
+    margin-left: 12px;
+
+    color:
+        var(--text-secondary);
+
+    transition:
+        transform
+        var(--transition-smooth);
+}
+
+
+.link-group-chevron svg {
+    display: block;
+
+    width: 16px !important;
+    height: 16px !important;
+
+    min-width: 16px;
+    min-height: 16px;
+
+    max-width: 16px;
+    max-height: 16px;
+
+    fill:
+        currentColor;
+}
+
+
+.link-group.is-open
+.link-group-chevron {
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   ACCORDION CONTENT
+========================================================= */
+
+.link-group-content {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    width: 100%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        grid-template-rows
+        320ms ease,
+        opacity
+        220ms ease,
+        visibility
+        220ms ease;
+}
+
+
+.link-group.is-open
+.link-group-content {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.link-group-panel {
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+
+.link-group.is-open
+.link-group-toggle {
+    min-height: 60px;
+
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   LINK LIST
+========================================================= */
+
+.link-list {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+
+    padding:
+        6px
+        14px
+        16px;
+}
+
+
+/* =========================================================
+   LINK ROW
+========================================================= */
+
+.link-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        50px;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-width: 0;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   LINK CARD
+========================================================= */
+
+.link-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 62px;
+
+    margin: 0;
+
+    padding:
+        10px
+        14px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius:
+        var(--radius-button);
+
+    color:
+        var(--text-primary);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.10),
+            rgba(255, 255, 255, 0.055)
+        );
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.12),
+
+        var(--shadow-button);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    transition:
+        background
+        var(--transition-normal),
+        transform
+        var(--transition-normal);
+}
+
+
+html.light
+.link-card {
+    color: #27272a;
+
+    background:
+        rgba(255, 255, 255, 0.6);
+
+    border-color:
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.link-card:hover {
+    transform:
+        translateY(-1px);
+
+    background:
+        var(--surface-hover);
+}
+
+
+/* =========================================================
+   LINK ICON
+========================================================= */
+
+.link-icon {
+    display: grid;
+
+    place-items: center;
+
+    flex:
+        0 0
+        34px;
+
+    width: 34px !important;
+    height: 34px !important;
+
+    min-width: 34px;
+    min-height: 34px;
+
+    max-width: 34px;
+    max-height: 34px;
+
+    margin-right: 10px;
+
+    overflow: hidden;
+
+    color:
+        currentColor;
+}
+
+
+.link-icon svg {
+    display: block;
+
+    width: 24px !important;
+    height: 24px !important;
+
+    min-width: 24px !important;
+    min-height: 24px !important;
+
+    max-width: 24px !important;
+    max-height: 24px !important;
+
+    fill:
+        currentColor;
+}
+
+
+.link-icon .text-icon,
+.text-icon {
+    display: grid;
+
+    place-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LINK CONTENT
+========================================================= */
+
+.link-content {
+    display: flex;
+
+    flex: 1 1 auto;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+.link-content strong {
+    display: block;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    color:
+        currentColor;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.link-content small {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 2px;
+
+    overflow: hidden;
+
+    font-size: 0.75rem;
+
+    line-height: 1.35;
+
+    color:
+        var(--text-muted);
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+/* =========================================================
+   LINK STATUS
+========================================================= */
+
+.link-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: max-content;
+
+    margin-top: 4px;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    transition:
+        color
+        180ms ease,
+        opacity
+        180ms ease;
+}
+
+
+/* =========================================================
+   CHECKING
+========================================================= */
+
+.link-status.is-checking {
+    color: #fbbf24;
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.link-status.is-active {
+    color: #22c55e;
+}
+
+
+/* =========================================================
+   INACTIVE
+========================================================= */
+
+.link-status.is-inactive {
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   EXTERNAL ARROW
+========================================================= */
+
+.link-external {
+    display: grid;
+
+    place-items: center;
+
+    flex:
+        0 0
+        22px;
+
+    width: 22px;
+    height: 22px;
+
+    margin-left: 6px;
+
+    font-size: 17px;
+
+    color:
+        var(--text-muted);
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.link-options {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    flex:
+        0 0
+        50px;
+
+    width: 50px;
+    min-width: 50px;
+
+    min-height: 62px;
+
+    gap: 3px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius-button);
+
+    color:
+        var(--text-secondary);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        var(--shadow-button);
+
+    transition:
+        background
+        var(--transition-fast),
+        transform
+        var(--transition-fast);
+}
+
+
+.link-options:hover {
+    transform:
+        translateY(-1px);
+
+    background:
+        var(--surface-hover);
+}
+
+
+.link-options span {
+    display: block;
+
+    flex-shrink: 0;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        currentColor;
+}
+
+
+.link-options.is-copied {
+    color:
+        #22c55e;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding-top: 4px;
+
+    text-align: center;
+}
+
+
+.site-footer p {
+    margin: 0;
+
+    font-size: 0.7rem;
+
+    line-height: 1.6;
+
+    color:
+        var(--text-muted);
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast-container {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 9999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    pointer-events: none;
+}
+
+
+.toast {
+    max-width: 300px;
+
+    padding:
+        10px
+        14px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+
+    color:
+        var(--text-primary);
+
+    background:
+        rgba(24, 24, 27, 0.92);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.3);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+
+.toast.is-leaving {
+    opacity: 0;
+
+    transform:
+        translateX(20px);
+
+    transition:
+        250ms ease;
+}
