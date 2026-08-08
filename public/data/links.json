@@ -33,36 +33,53 @@
             "defaultOpen": false,
             "items": [
                 {
-    "id": "cv-qris",
-    "title": "cv qris",
-    "description": "qris static to dinamis",
-    "url": "https://qris.jinam.app",
-    "icon": "assets/icons/qris.png",
-    "newTab": true,
-    "enabled": true,
-    "statusCheck": true
+                    "id": "cv-qris",
+                    "title": "Proyek",
+                    "description": "convert qris static to dinamis",
+                    "url": "https://qris.jinam.app",
+                    "icon": "assets/icons/qris.png",
+                    "newTab": true,
+                    "enabled": true,
+                    "statusCheck": true
                 },
+                {
+                    "title": "Learning Transcript",
+                    "description": "Transcript Cisco Networking Academy",
+                    "url": "https://drive.google.com/file/d/1FG5pBdMEvdsZTKZATWxIaR3QsPiB821Z/view?usp=drive_link",
+                    "icon": "assets/icons/netacad.svg",
+                    "newTab": true,
+                    "enabled": true
+                },
+                {
+                    "title": "Google Skills",
+                    "description": "Badge",
+                    "url": "https://www.skills.google/public_profiles/64cd8a16-6afc-4322-8e79-5f976c68c85d",
+                    "icon": "assets/icons/gs.png",
+                    "newTab": true,
+                    "enabled": true
+                },
+                {
+                    "title": "Credly v1",
+                    "description": "Badge Cisco Networking Academy",
+                    "url": "https://www.credly.com/users/hajijin-amri",
+                    "icon": "assets/icons/credly.svg",
+                    "newTab": true,
+                    "enabled": true
+                },
+                                {
+                    "title": "Credly v2",
+                    "description": "Badge Google Skills",
+                    "url": "https://www.credly.com/users/hajijin-amri.61a238eb",
+                    "icon": "assets/icons/credly.svg",
+                    "newTab": true,
+                    "enabled": true
+                },
+
                 {
                     "title": "GitHub",
-                    "description": "github.com",
+                    "description": "Repositori Random",
                     "url": "https://github.com/amri134",
                     "icon": "github",
-                    "newTab": true,
-                    "enabled": true
-                },
-                {
-                    "title": "Youtube",
-                    "description": "YT",
-                    "url": "https://www.youtube.com/@hajijinamri6706",
-                    "icon": "assets/icons/yt.png",
-                    "newTab": true,
-                    "enabled": true
-                },
-                {
-                    "title": "Rakamin",
-                    "description": "Data ada yang eror",
-                    "url": "https://app.rakamin.com/profile/hajijin-amri-ivk47ptyjhgep6n8",
-                    "icon": "assets/icons/rakamin.png",
                     "newTab": true,
                     "enabled": true
                 }
@@ -95,6 +112,14 @@
                     "description": "Hajijin Amri",
                     "url": "https://facebook.com/hajijin.amri.9",
                     "icon": "assets/icons/fb.png",
+                    "newTab": true,
+                    "enabled": true
+                },
+                {
+                    "title": "Youtube",
+                    "description": "Berisi Video untuk tugas dan tutorial",
+                    "url": "https://www.youtube.com/@hajijinamri6706",
+                    "icon": "assets/icons/yt.png",
                     "newTab": true,
                     "enabled": true
                 }
