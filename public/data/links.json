@@ -33,10 +33,10 @@
             "defaultOpen": false,
             "items": [
                 {
-                    "id": "cv-qris",
-                    "title": "Proyek",
-                    "description": "convert qris static to dinamis",
-                    "url": "https://qris.jinam.app",
+                    "id": "portfolio",
+                    "title": "portfolio",
+                    "description": "Portofolio Simple",
+                    "url": "https://portofolio17-b94634308440.herokuapp.com/",
                     "icon": "assets/icons/qris.png",
                     "newTab": true,
                     "enabled": true,
