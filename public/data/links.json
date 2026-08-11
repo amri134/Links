@@ -37,7 +37,7 @@
                     "title": "portfolio",
                     "description": "Portofolio Simple",
                     "url": "https://portofolio17-b94634308440.herokuapp.com/",
-                    "icon": "assets/icons/qris.png",
+                    "icon": "assets/icons/foto.png",
                     "newTab": true,
                     "enabled": true,
                     "statusCheck": true
