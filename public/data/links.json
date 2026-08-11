@@ -35,12 +35,12 @@
                 {
                     "id": "portfolio",
                     "title": "portfolio",
-                    "description": "Portofolio Simple",
+                    "description": "Simple Portofolio",
                     "url": "https://portofolio17-b94634308440.herokuapp.com/",
                     "icon": "assets/icons/foto.png",
                     "newTab": true,
                     "enabled": true,
-                    "statusCheck": true
+                    "statusCheck": false
                 },
                 {
                     "title": "Learning Transcript",
