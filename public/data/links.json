@@ -178,6 +178,14 @@
                     "icon": "publication",
                     "newTab": true,
                     "enabled": true
+                },
+                {
+                    "title": "DOI",
+                    "description": "Jurnal Sisfotek",
+                    "url": "https://seminar.iaii.or.id/index.php/SISFOTEK/article/view/620",
+                    "icon": "publication",
+                    "newTab": true,
+                    "enabled": true
                 }
             ]
         }
