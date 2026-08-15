@@ -2,9 +2,9 @@
     "quickLinks": [
         {
             "title": "Web ini",
-            "url": "https://jinam.app",
+            "url": "https://portofolio17-b94634308440.herokuapp.com/",
             "icon": "website",
-            "enabled": false
+            "enabled": true
         },
         {
             "title": "GitHub",
