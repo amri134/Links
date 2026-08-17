@@ -2,7 +2,7 @@
     "quickLinks": [
         {
             "title": "Web ini",
-            "url": "https://portofolio17-b94634308440.herokuapp.com/",
+            "url": "https://hajijinamri.me",
             "icon": "website",
             "enabled": true
         },
@@ -36,7 +36,7 @@
                     "id": "portfolio",
                     "title": "portfolio",
                     "description": "Simple Portofolio",
-                    "url": "https://portofolio17-b94634308440.herokuapp.com/",
+                    "url": "https://hajijinamri.me",
                     "icon": "assets/icons/foto.png",
                     "newTab": true,
                     "enabled": true,
