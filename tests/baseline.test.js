@@ -111,7 +111,7 @@ test("header cache dan keamanan diterapkan dengan aman", async () => {
     assert.match(csp, /default-src 'self'/);
     assert.match(csp, /https:\/\/static\.cloudflareinsights\.com/);
     assert.doesNotMatch(csp, /script-src[^;]*unsafe-inline/);
-    assert.match(csp, /require-trusted-types-for 'script'/);
+    assert.doesNotMatch(csp, /require-trusted-types-for/);
     assert.equal(html.headers.get("x-content-type-options"), "nosniff");
     assert.equal(html.headers.get("x-frame-options"), "SAMEORIGIN");
     assert.equal(html.headers.get("cross-origin-opener-policy"), "same-origin");
