@@ -18,12 +18,7 @@
     async function loadJSON(path) {
 
         const response =
-            await fetch(
-                path,
-                {
-                    cache: "no-store"
-                }
-            );
+            await fetch(path);
 
 
         if (!response.ok) {
@@ -563,18 +558,21 @@
 
             initActions();
 
-            await loadPageData();
-
-
-            if (
+            const linksReady =
                 window.AppLinks &&
                 typeof window.AppLinks.init ===
-                    "function"
-            ) {
+                    "function";
 
-                await window.AppLinks.init();
 
-            }
+            await Promise.all([
+
+                loadPageData(),
+
+                linksReady
+                    ? window.AppLinks.init()
+                    : Promise.resolve()
+
+            ]);
 
         }
         catch (error) {

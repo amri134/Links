@@ -254,20 +254,35 @@
 
     pointer-events: none;
 
-    animation:
-        profileRingSpin
-        8s
-        linear
-        infinite;
+    animation: none;
 }
 
 
 .profile-ring-dashed {
-    animation:
-        profileRingDash
-        8s
-        ease-in-out
-        infinite;
+    animation: none;
+}
+
+
+/* Dekorasi dianimasikan hanya pada perangkat desktop yang mendukung hover. */
+@media (min-width: 768px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+
+    .profile-story-ring {
+        animation:
+            profileRingSpin
+            8s
+            linear
+            infinite;
+    }
+
+
+    .profile-ring-dashed {
+        animation:
+            profileRingDash
+            8s
+            ease-in-out
+            infinite;
+    }
+
 }
 
 

@@ -1366,12 +1366,7 @@ toggle.addEventListener(
     async function loadJSON(path) {
 
         const response =
-            await fetch(
-                path,
-                {
-                    cache: "no-store"
-                }
-            );
+            await fetch(path);
 
 
         if (!response.ok) {

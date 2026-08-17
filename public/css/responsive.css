@@ -29,6 +29,17 @@
 
 @media (max-width: 767px) {
 
+    /*
+       Blur latar memerlukan komposit ulang yang cukup mahal di perangkat
+       sentuh. Warna semi-transparan yang sudah ada menjaga desainnya.
+    */
+    .profile-action-button,
+    .link-card,
+    .toast {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
     .page-wrapper {
         padding:
             18px

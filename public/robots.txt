@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jinam.app/sitemap.xml
+Sitemap: https://links.hajijinamri.me/sitemap.xml

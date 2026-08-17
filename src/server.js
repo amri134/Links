@@ -33,6 +33,48 @@ const PUBLIC_DIR =
 
 
 /* =========================================================
+   SECURITY HEADERS
+========================================================= */
+
+app.use(
+    function (
+        req,
+        res,
+        next
+    ) {
+
+        res.setHeader(
+            "Content-Security-Policy",
+            "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        );
+
+        res.setHeader(
+            "Permissions-Policy",
+            "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+        );
+
+        res.setHeader(
+            "Referrer-Policy",
+            "strict-origin-when-cross-origin"
+        );
+
+        res.setHeader(
+            "X-Content-Type-Options",
+            "nosniff"
+        );
+
+        res.setHeader(
+            "X-Frame-Options",
+            "SAMEORIGIN"
+        );
+
+        next();
+
+    }
+);
+
+
+/* =========================================================
    DEVELOPMENT CORS
 
    Mengizinkan VS Code Live Server:
@@ -95,7 +137,59 @@ app.use(
 
 app.use(
     express.static(
-        PUBLIC_DIR
+        PUBLIC_DIR,
+        {
+            setHeaders: function (
+                res,
+                filePath
+            ) {
+
+                const extension =
+                    path.extname(
+                        filePath
+                    ).toLowerCase();
+
+
+                if (
+                    extension === ".html"
+                ) {
+
+                    res.setHeader(
+                        "Cache-Control",
+                        "no-cache"
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (
+                    extension === ".json" ||
+                    extension === ".xml" ||
+                    extension === ".txt" ||
+                    extension === ".webmanifest"
+                ) {
+
+                    res.setHeader(
+                        "Cache-Control",
+                        "public, max-age=3600"
+                    );
+
+
+                    return;
+
+                }
+
+
+                res.setHeader(
+                    "Cache-Control",
+                    "public, max-age=86400"
+                );
+
+            }
+        }
     )
 );
 
