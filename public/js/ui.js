@@ -11,6 +11,23 @@
         "color-mode";
 
 
+    const TRUSTED_HTML_POLICY =
+        window.trustedTypes
+            ? window.trustedTypes.createPolicy(
+                "jinam-static-html",
+                {
+                    createHTML: function (
+                        value
+                    ) {
+
+                        return value;
+
+                    }
+                }
+            )
+            : null;
+
+
     /* =====================================================
        SELECT
     ===================================================== */
@@ -98,6 +115,32 @@
 
         element.textContent =
             value ?? "";
+
+    }
+
+
+    function setHTML(
+        target,
+        value
+    ) {
+
+        const element =
+            typeof target === "string"
+                ? select(target)
+                : target;
+
+
+        if (!element) {
+            return;
+        }
+
+
+        element.innerHTML =
+            TRUSTED_HTML_POLICY
+                ? TRUSTED_HTML_POLICY.createHTML(
+                    value
+                )
+                : value;
 
     }
 
@@ -385,6 +428,7 @@
             createElement,
 
             setText,
+            setHTML,
 
             show,
             hide,

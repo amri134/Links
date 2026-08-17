@@ -119,7 +119,7 @@
                     "title": "Youtube",
                     "description": "Berisi Video untuk tugas dan tutorial",
                     "url": "https://www.youtube.com/@hajijinamri6706",
-                    "icon": "assets/icons/yt.png",
+                    "icon": "assets/icons/yt.svg",
                     "newTab": true,
                     "enabled": true
                 }

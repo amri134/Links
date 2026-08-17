@@ -45,7 +45,12 @@ app.use(
 
         res.setHeader(
             "Content-Security-Policy",
-            "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+            "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; trusted-types jinam-static-html; require-trusted-types-for 'script'"
+        );
+
+        res.setHeader(
+            "Cross-Origin-Opener-Policy",
+            "same-origin"
         );
 
         res.setHeader(
@@ -56,6 +61,11 @@ app.use(
         res.setHeader(
             "Referrer-Policy",
             "strict-origin-when-cross-origin"
+        );
+
+        res.setHeader(
+            "Strict-Transport-Security",
+            "max-age=31536000; includeSubDomains"
         );
 
         res.setHeader(

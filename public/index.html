@@ -76,31 +76,9 @@
         content="Link resmi Hajijin Amri: portofolio, profil profesional, media sosial, sertifikat, publikasi, dan kontak."
     >
 
-    <!-- =====================================================
-         THEME BEFORE PAGE RENDER
-    ====================================================== -->
-    <script>
-        (function () {
-            try {
-                const savedTheme =
-                    localStorage.getItem("color-mode");
-
-                const prefersDark =
-                    window.matchMedia(
-                        "(prefers-color-scheme: dark)"
-                    ).matches;
-
-                const theme =
-                    savedTheme ||
-                    (prefersDark ? "dark" : "light");
-
-                document.documentElement.classList.add(theme);
-            }
-            catch (error) {
-                document.documentElement.classList.add("dark");
-            }
-        })();
-    </script>
+    <script
+        src="./js/theme-init.js"
+    ></script>
 
     <!-- =====================================================
          FAVICON

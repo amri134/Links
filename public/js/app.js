@@ -108,10 +108,12 @@
                 );
 
 
-        icon.innerHTML =
+        AppUI.setHTML(
+            icon,
             dark
                 ? SUN_ICON
-                : MOON_ICON;
+                : MOON_ICON
+        );
 
 
         if (siteConfig) {

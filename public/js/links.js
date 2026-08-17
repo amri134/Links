@@ -639,9 +639,11 @@ function checkGroupStatuses(
        BUILT-IN ICON
     ===================================================== */
 
-    wrapper.innerHTML =
+    AppUI.setHTML(
+        wrapper,
         ICONS[iconName] ||
-        ICONS.link;
+        ICONS.link
+    );
 
 
     return wrapper;
@@ -906,11 +908,11 @@ function checkGroupStatuses(
         );
 
 
-        button.innerHTML = `
+        AppUI.setHTML(button, `
             <span></span>
             <span></span>
             <span></span>
-        `;
+        `);
 
 
         button.addEventListener(
@@ -1137,7 +1139,7 @@ function checkGroupStatuses(
             );
 
 
-        chevron.innerHTML = `
+        AppUI.setHTML(chevron, `
             <svg
                 viewBox="0 0 20 20"
                 width="16"
@@ -1163,7 +1165,7 @@ function checkGroupStatuses(
                     "
                 />
             </svg>
-        `;
+        `);
 
 
         toggle.appendChild(

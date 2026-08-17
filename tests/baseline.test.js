@@ -77,10 +77,12 @@ test("aset inti dan file crawler tetap dapat diakses", async () => {
     for (const path of [
         "/css/base.css",
         "/js/app.js",
+        "/js/theme-init.js",
         "/data/site.json",
         "/assets/images/foto-192.webp",
         "/assets/images/foto-192.png",
         "/assets/icons/icon-512.png",
+        "/assets/icons/yt.svg",
         "/robots.txt",
         "/sitemap.xml",
         "/manifest.webmanifest"
@@ -101,9 +103,22 @@ test("header cache dan keamanan diterapkan dengan aman", async () => {
     assert.equal(html.headers.get("cache-control"), "no-cache");
     assert.equal(stylesheet.headers.get("cache-control"), "public, max-age=86400");
     assert.equal(data.headers.get("cache-control"), "public, max-age=3600");
-    assert.match(html.headers.get("content-security-policy"), /default-src 'self'/);
+    const csp =
+        html.headers.get(
+            "content-security-policy"
+        );
+
+    assert.match(csp, /default-src 'self'/);
+    assert.match(csp, /https:\/\/static\.cloudflareinsights\.com/);
+    assert.doesNotMatch(csp, /script-src[^;]*unsafe-inline/);
+    assert.match(csp, /require-trusted-types-for 'script'/);
     assert.equal(html.headers.get("x-content-type-options"), "nosniff");
     assert.equal(html.headers.get("x-frame-options"), "SAMEORIGIN");
+    assert.equal(html.headers.get("cross-origin-opener-policy"), "same-origin");
+    assert.equal(
+        html.headers.get("strict-transport-security"),
+        "max-age=31536000; includeSubDomains"
+    );
     assert.equal(
         html.headers.get("referrer-policy"),
         "strict-origin-when-cross-origin"
